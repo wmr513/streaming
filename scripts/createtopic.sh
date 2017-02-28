@@ -1,0 +1,6 @@
+echo creating topic $1 ...
+/usr/local/kafka/bin/kafka-topics.sh --create --zookeeper 127.0.0.1:32771 --replication-factor 1 --partitions 1 --topic $1
+
+echo verifying topic $1 ...
+/usr/local/kafka/bin/kafka-topics.sh --zookeeper 127.0.0.1:32771 --describe --topic $1
+
